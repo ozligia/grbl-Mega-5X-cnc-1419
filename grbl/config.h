@@ -52,7 +52,7 @@
 // unpredictable behavior!
 //----------------------------------------------------------------------
 
-#define N_AXIS 5        // Number of axes (3 to 6)
+#define N_AXIS 3        // Number of axes (3 to 6)
 #define N_AXIS_LINEAR 3 // Number of linears axis, must be <= N_AXIS
 
 // Axis indexing and names
@@ -120,8 +120,8 @@
 // SPINDLE_PWM_ON_D9  => 0-12v 8 bits PWM on RAMPS D9
 // SPINDLE_PWM_ON_D6  => 0-5v 8bits PWM on RAMPS Servo 2 signal (Mega 2560 D6)
 // Uncomment the line which correspond to your hardware
-#define SPINDLE_PWM_ON_D8
-//#define SPINDLE_PWM_ON_D6
+//#define SPINDLE_PWM_ON_D8
+#define SPINDLE_PWM_ON_D6
 //#define SPINDLE_PWM_ON_D9
 
 // Spindle PWM signal inversion:
@@ -350,10 +350,10 @@
 
 // Enable the following line to inverse logical behaviour (Normaly Open / Normaly Closed)
 // of some min limit switches attached.
-//#define INVERT_MIN_LIMIT_PIN_MASK ((1<<AXIS_1) | (1<<AXIS_2) | (1<<AXIS_3))
+#define INVERT_MIN_LIMIT_PIN_MASK ((1<<AXIS_1) | (1<<AXIS_2))
 // Enable the following line to inverse logical behaviour (Normaly Open / Normaly Closed)
 // of some max limit switches attached.
-//#define INVERT_MAX_LIMIT_PIN_MASK ((1<<AXIS_1) | (1<<AXIS_2) | (1<<AXIS_3))
+#define INVERT_MAX_LIMIT_PIN_MASK ((1<<AXIS_3))
 
 // Inverts the spindle enable pin from low-disabled/high-enabled to low-enabled/high-disabled. Useful
 // for some pre-built electronic boards.
