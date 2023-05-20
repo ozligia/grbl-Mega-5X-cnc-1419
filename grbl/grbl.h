@@ -64,6 +64,7 @@
 #include "stepper.h"
 #include "jog.h"
 #include "sleep.h"
+#include "backlash.h"
 
 // ---------------------------------------------------------------------------------------
 // COMPILE-TIME ERROR CHECKING OF DEFINE VALUES:

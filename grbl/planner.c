@@ -327,6 +327,10 @@ uint8_t plan_buffer_line(float *target, plan_line_data_t *pl_data)
   float unit_vec[N_AXIS], delta_mm;
   uint8_t idx;
 
+  if ((pl_data->condition &(1<<PL_COND_FLAG_BACKLASH_COMP)))
+	block->back_lash_comp = 1;
+	memset(position_steps,0,sizeof(position_steps));
+
   // Copy position data based on type of motion being planned.
   if (block->condition & PL_COND_FLAG_SYSTEM_MOTION) {
     #ifdef COREXY
